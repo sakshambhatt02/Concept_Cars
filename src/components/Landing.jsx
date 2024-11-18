@@ -12,7 +12,7 @@ export default function Landing() {
 
 const BackgroundVideo = () => (
   <video
-    src="./assets/video.mp4"
+    src={`${process.env.PUBLIC_URL}/assets/video.mp4`}
     autoPlay
     muted
     loop

@@ -31,15 +31,22 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { to: "/", label: "Home" },
+    { to: "/Concept_Cars", label: "Home" },
     { to: "/content", label: "Content" },
     { to: "/contactUs", label: "Contact Us" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 z-10 w-full transition-all duration-300 bg-black/80 transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav
+      className={`fixed top-0 left-0 z-10 w-full transition-all duration-300 bg-black/80 transform ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-[2rem] md:text-[2.5vw] text-orange-500 font-serif tracking-wider hover:text-orange-400 transition-colors duration-300">
+        <Link
+          to="/"
+          className="text-[2rem] md:text-[2.5vw] text-orange-500 font-serif tracking-wider hover:text-orange-400 transition-colors duration-300"
+        >
           CONCEPT CARS
         </Link>
         <div className="hidden md:flex gap-8 text-white">
@@ -48,7 +55,7 @@ export default function Navbar() {
               key={link.to}
               to={link.to}
               className={`hover:text-orange-500 transition-colors duration-300 uppercase text-sm tracking-widest ${
-                location.pathname === link.to ? 'text-orange-500' : ''
+                location.pathname === link.to ? "text-orange-500" : ""
               }`}
             >
               {link.label}
@@ -70,7 +77,9 @@ export default function Navbar() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+              d={
+                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+              }
             />
           </svg>
         </button>
@@ -84,7 +93,7 @@ export default function Navbar() {
                 to={link.to}
                 onClick={closeMenu}
                 className={`block py-2 px-6 text-white hover:text-orange-500 transition-colors duration-300 uppercase text-sm tracking-widest ${
-                  location.pathname === link.to ? 'text-orange-500' : ''
+                  location.pathname === link.to ? "text-orange-500" : ""
                 }`}
               >
                 {link.label}

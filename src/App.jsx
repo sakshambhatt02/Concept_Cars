@@ -11,27 +11,28 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false);
     }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
-    <>
-      {loading ? (
-        <Loader loading={loading} />
-      ) : (
-        <div className="bg-black w-full min-h-screen">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Landing />}></Route>
-            <Route path="/content" element={<Content />}></Route>
-            <Route path="/contactUs" element={<Contact />}></Route>
-          </Routes>
-          <Footer />
-        </div>
-      )}
-    </>
+    <div className="bg-black w-full min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/Concept_Cars" element={<Landing />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/contactUs" element={<Contact />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
