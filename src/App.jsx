@@ -27,9 +27,9 @@ export default function App() {
       <Navbar />
       <main className="flex-grow">
         <Routes>
-          <Route path="/Concept_Cars" element={<Landing />} />
-          <Route path="/content" element={<Content />} />
-          <Route path="/contactUs" element={<Contact />} />
+          <Route path="/Concept_Cars/" element={<Landing />} />
+          <Route path="/Concept_Cars/content" element={<Content />} />
+          <Route path="/Concept_Cars/contactUs" element={<Contact />} />
         </Routes>
       </main>
       <Footer />
