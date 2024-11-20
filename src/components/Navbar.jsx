@@ -31,9 +31,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { to: "/Concept_Cars", label: "Home" },
-    { to: "/Concept_Cars/content", label: "Content" },
-    { to: "/Concept_Cars/contactUs", label: "Contact Us" },
+    { to: "/", label: "Home" },
+    { to: "/content", label: "Content" },
+    { to: "/contactUs", label: "Contact Us" },
   ];
 
   return (
