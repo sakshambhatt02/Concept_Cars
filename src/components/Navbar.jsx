@@ -32,8 +32,8 @@ export default function Navbar() {
 
   const navLinks = [
     { to: "/Concept_Cars", label: "Home" },
-    { to: "/content", label: "Content" },
-    { to: "/contactUs", label: "Contact Us" },
+    { to: "/Concept_Cars/content", label: "Content" },
+    { to: "/Concept_Cars/contactUs", label: "Contact Us" },
   ];
 
   return (
@@ -43,12 +43,9 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          to="/"
-          className="text-[2rem] md:text-[2.5vw] text-orange-500 font-serif tracking-wider hover:text-orange-400 transition-colors duration-300"
-        >
+        <p className="text-[2rem] md:text-[2.5vw] text-orange-500 font-serif tracking-wider hover:text-orange-400 transition-colors duration-300">
           CONCEPT CARS
-        </Link>
+        </p>
         <div className="hidden md:flex gap-8 text-white">
           {navLinks.map((link) => (
             <Link
